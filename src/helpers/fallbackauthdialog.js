@@ -20,7 +20,7 @@ const loginRequest = {
 const msalConfig = {
   auth: {
     clientId: clientId,
-    authority: "https://login.microsoftonline.com/common",
+    authority: "https://login.microsoftonline.com/7771aa06-3283-4834-b895-908f3bdb9850",
     redirectUri: "https://localhost:3000/fallbackauthdialog.html", // Update config script to enable `https://${window.location.host}/fallbackauthdialog.html`,
     navigateToLoginRequestUrl: false,
   },

@@ -10,7 +10,6 @@ export async function run(callback) {
   getUserProfile((result) => {
     emailMessages = result.emailMessages.value
     emailFolders = result.emailFolders.value
-    console.log(emailMessages)
     if (callback) {
       callback(true);
     }
