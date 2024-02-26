@@ -51,7 +51,10 @@ yarn start
 
 After running the application, it might prompt you to log into a Microsoft account. If this occurs, simply log in using whichever Microsoft account you feel comfortable with.
 
+
 Step 5. Adding the Add-in into your Add-ins (Video)
+
+To complete step 5, you must first download the raw manifest.xml file from this GitHub repo. Once you've done that, simply follow along with the video below:
 
 
 
