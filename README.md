@@ -56,9 +56,17 @@ Step 5. Adding the Add-in into your Add-ins (Video)
 
 To complete step 5, you must first download the raw manifest.xml file from this GitHub repo. Once you've done that, simply follow along with the video below:
 
-
+https://github.com/Mr-Mingels/ConveyGuruOutlookAddIn/assets/118281837/1dd33649-8e14-4f3c-8ed3-252541349ed3
 
 Once you've added the add-in to your add-ins, you can then freely use it as you please, as long as you're still running the application locally. Here's a video of me using the application with one of my work emails:
+
+Part One:
+
+https://github.com/Mr-Mingels/ConveyGuruOutlookAddIn/assets/118281837/2959f53b-9a57-4fdf-be21-e0f4800d1666
+
+Part Two
+
+https://github.com/Mr-Mingels/ConveyGuruOutlookAddIn/assets/118281837/b1a97117-6928-45fe-b86c-dafddfe5c95c
 
 ## IMPORTANT NOTE:
 
@@ -69,6 +77,8 @@ Email:
 ```text
 testuser@SWEINC716.onmicrosoft.com
 ```
+
+Password:
 
 ```text
 ConveyGuruTest1234
