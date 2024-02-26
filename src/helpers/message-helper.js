@@ -6,16 +6,6 @@
 /* global document */
 
 export function showMessage(text) {
-  document.getElementById("message-area").style.display = "flex";
-  document.getElementById("message-area").innerText = text;
-}
-
-export function clearMessage() {
-  document.getElementById("message-area").style.display = "flex";
-  document.getElementById("message-area").innerText = "---<br>";
-}
-
-export function hideMessage() {
-  document.getElementById("message-area").style.display = "none";
-  document.getElementById("message-area").innerText = "---<br>";
+  console.log("BACKEND ERROR:", text)
+  console.log('-----------------------------------------------------------------')
 }

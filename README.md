@@ -57,4 +57,18 @@ Step 5. Adding the Add-in into your Add-ins (Video)
 
 Once you've added the add-in to your add-ins, you can then freely use it as you please, as long as you're still running the application locally. Here's a video of me using the application with one of my work emails:
 
+## IMPORTANT NOTE:
+
+Unfortunately, I wasn't able to enable login for anybody with a personal Microsoft account due to an Outlook Add-in error specific to Outlook Add-ins, which I couldn't seem to fix. Therefore, to use this Add-in, you need a Microsoft work or school account. If you don't have either of those, I understand. I've created a dummy account that you can use to test the Add-in below.
+
+Email:
+
+```text
+testuser@SWEINC716.onmicrosoft.com
+```
+
+```text
+ConveyGuruTest1234
+```
+
 ### Happy Hacking! 💻 🎉
