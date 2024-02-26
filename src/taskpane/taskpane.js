@@ -8,8 +8,8 @@ export let emailFolders = []
 
 export async function run(callback) {
   getUserProfile((result) => {
-    emailMessages = result.emailMessages.value
-    emailFolders = result.emailFolders.value
+    emailMessages = result.emailMessages ? result.emailMessages.value : []
+    emailFolders = result.emailFolders ? result.emailFolders.value : []
     if (callback) {
       callback(true);
     }
