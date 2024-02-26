@@ -21,8 +21,8 @@ export default {
         <div class="emailModalContent">
             <div class="emailModalInfoWrapper">
                 <div class="emailModalTxtWrapper">
-                    <span class="emailModalSenderTxt">From: <span class="emailModalSenderName">{{ sender.name ? sender.name : "NaN" }} <span
-                                class="sendersEmail" v-if="sender.address">
+                    <span class="emailModalSenderTxt">From: <span class="emailModalSenderName">{{ sender.name ? sender.name
+                        : "NaN" }} <span class="sendersEmail" v-if="sender.address">
                                 &lt;{{ sender.address }}>
                             </span></span></span>
                     <span class="emailModalToTxt">To:

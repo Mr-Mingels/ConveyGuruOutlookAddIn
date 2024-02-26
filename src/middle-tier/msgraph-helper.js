@@ -14,13 +14,8 @@ const version = "v1.0";
 export async function getUserData(req, res, next) {
   const authorization = req.get("Authorization");
 
-  console.log("AUTHORIZATION: ", authorization)
-  console.log('-------------------------------------------------------')
-
   await getAccessToken(authorization)
     .then(async (graphTokenResponse) => {
-      console.log("GRAPH TOKEN RESPONSE:", graphTokenResponse)
-      console.log('-------------------------------------------------------')
       if (graphTokenResponse && (graphTokenResponse.claims || graphTokenResponse.error)) {
         res.send(graphTokenResponse);
       } else {
@@ -28,30 +23,18 @@ export async function getUserData(req, res, next) {
         const graphUrlSegment = process.env.GRAPH_URL_SEGMENT || "/me";
         const graphQueryParamSegment = process.env.QUERY_PARAM_SEGMENT || "";
 
-        console.log("GRAPH TOKEN", graphToken);
-        console.log('-------------------------------------------------------')
-
         const graphData = await getGraphData(graphToken, graphUrlSegment, graphQueryParamSegment);
-
-        console.log("GRAPH DATA", graphData);
-        console.log('-------------------------------------------------------')
 
         const emailMessages = await getEmailMessages(graphToken);
 
-        console.log("EMAIL MESSAGES", emailMessages);
-        console.log('-------------------------------------------------------')
-
         const emailFolders = await getEmailFolders(graphToken);
-
-        console.log("EMAIL FOLDERS", emailFolders);
-        console.log('-------------------------------------------------------')
 
         const responseData = {
           userData: graphData,
           emailMessages: emailMessages,
           emailFolders: emailFolders
         };
-        
+
         // If Microsoft Graph returns an error, such as invalid or expired token,
         // there will be a code property in the returned object set to a HTTP status (e.g. 401).
         // Relay it to the client. It will caught in the fail callback of `makeGraphApiCall`.
@@ -71,27 +54,11 @@ export async function getUserData(req, res, next) {
 export async function getEmailMessages(accessToken) {
   const apiUrl = "/me/messages";
 
-  console.log("API URL:", apiUrl)
-  console.log('---------------------------------------------------------------')
-
-  // Additional query parameters can be added as needed
-
-  console.log("EMAIL MESSAGE ACCESS TOKEN:", accessToken)
-  console.log('---------------------------------------------------------------')
-
   return getGraphData(accessToken, apiUrl, "");
 }
 
 export async function getEmailFolders(accessToken) {
   const apiUrl = "/me/mailFolders";
-
-  console.log("API URL:", apiUrl)
-  console.log('---------------------------------------------------------------')
-
-  // Additional query parameters can be added as needed
-
-  console.log("EMAIL MESSAGE ACCESS TOKEN:", accessToken)
-  console.log('---------------------------------------------------------------')
 
   return getGraphData(accessToken, apiUrl, "");
 }

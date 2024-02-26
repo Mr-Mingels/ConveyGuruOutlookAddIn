@@ -1,5 +1,5 @@
 <script>
-import { ref, onMounted } from 'vue';
+import { ref } from 'vue';
 import { emailMessages, emailFolders } from '../taskpane/taskpane.js'
 import { useRouter } from 'vue-router';
 
@@ -37,12 +37,6 @@ export default {
                 return folder ? folder.id : null;
             });
 
-            console.log("CHECKED FOLDERS:", checkedFolders)
-            console.log("-----------------------------------------------------------------------")
-
-            console.log("FOLDER IDS:", folderIds)
-            console.log("-----------------------------------------------------------------------")
-
             return emailMessages.filter(message => {
                 return folderIds.includes(message.parentFolderId);
             }).map(message => {
@@ -63,19 +57,12 @@ export default {
 
             const newMessages = filterMessages()
 
-            console.log("ALL FILTERED MESSAGES:", newMessages)
-
             const selectedFolders = folders.value
                 .filter(folder => folder.checked)
                 .map(folder => folder.folderDisplayName);
 
             router.push({ path: '/emails', query: { messages: JSON.stringify(newMessages), folders: JSON.stringify(selectedFolders) } });
         }
-
-        onMounted(() => {
-            console.log(emailMessages);
-            console.log(emailFolders);
-        });
 
         return {
             folders,

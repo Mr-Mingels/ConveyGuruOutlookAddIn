@@ -1,6 +1,5 @@
 <script>
 import { run } from '../taskpane/taskpane.js'
-import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 export default {
     name: 'WelcomePage',

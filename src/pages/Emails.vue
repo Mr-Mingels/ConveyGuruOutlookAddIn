@@ -1,5 +1,5 @@
 <script>
-import { ref, computed } from 'vue';
+import { ref } from 'vue';
 import EmailModal from '@/components/EmailModal.vue';
 import { useRoute, useRouter } from 'vue-router';
 import { formatDate } from '../utils/dateUtil.js'
@@ -14,9 +14,6 @@ export default {
         const newMessages = ref(JSON.parse(route.query.messages));
         const folders = JSON.parse(route.query.folders);
 
-        console.log("NEW MESSAGES: ", newMessages.value)
-        console.log("SELECTED FOLDERS:", folders)
-
         let headerTitle = ref('All Mail')
 
         const selectedEmail = ref(null);
@@ -26,7 +23,6 @@ export default {
                 toggleFilterDropDown()
             }
             selectedEmail.value = newMessages.value[index];
-            console.log("SELECTED EMAIL:",selectedEmail)
         };
 
         const closeModal = () => {
@@ -47,11 +43,9 @@ export default {
         const filterMessagesByFolder = (folder) => {
             if (folder === 'All Mail') {
                 newMessages.value = JSON.parse(route.query.messages);
-                console.log("ALL MAIL FILTER NEW MESSAGES:", newMessages)
                 headerTitle.value = 'All Mail';
             } else {
                 newMessages.value = JSON.parse(route.query.messages).filter(message => message.folder === folder);
-                console.log("OTHER FOLDER FILTER NEW MESSAGES:", newMessages)
                 headerTitle.value = folder === 'Outbox' ? 'In progress' : folder === 'Sent Items' ? 'Sent' : folder;
             }
             toggleFilterDropDown();

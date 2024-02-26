@@ -19,8 +19,6 @@ export async function getAccessToken(authorization) {
     return Promise.reject(error);
   } else {
     const scopeName = process.env.SCOPE || "User.Read";
-    console.log("SCOPE NAME:", scopeName);
-    console.log("-------------------------------------------------------------------------");
     const [, /* schema */ assertion] = authorization.split(" ");
 
     const tokenScopes = jwt.decode(assertion).scp.split(" ");
@@ -38,9 +36,6 @@ export async function getAccessToken(authorization) {
       scope: [scopeName].join(" "),
     };
 
-    console.log("FORM PARAMS:", formParams);
-    console.log("-------------------------------------------------------------------------");
-
     const stsDomain = "https://login.microsoftonline.com";
     const tenant = "common";
     const tokenURLSegment = "oauth2/v2.0/token";
@@ -55,12 +50,8 @@ export async function getAccessToken(authorization) {
       },
     });
 
-    console.log("TOKEN RESPONSE:", formParams);
-    console.log("-------------------------------------------------------------------------");
     const json = await tokenResponse.json();
 
-    console.log("JSON:", json);
-    console.log("-------------------------------------------------------");
     return json;
   }
 }
