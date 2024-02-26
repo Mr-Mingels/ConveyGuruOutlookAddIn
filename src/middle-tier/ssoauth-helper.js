@@ -11,7 +11,7 @@ import { JwksClient } from "jwks-rsa";
 
 /* global process, console */
 
-const DISCOVERY_KEYS_ENDPOINT = "https://login.microsoftonline.com/7771aa06-3283-4834-b895-908f3bdb9850/discovery/v2.0/keys";
+const DISCOVERY_KEYS_ENDPOINT = "https://login.microsoftonline.com/common/discovery/v2.0/keys";
 
 export async function getAccessToken(authorization) {
   if (!authorization) {
@@ -37,7 +37,7 @@ export async function getAccessToken(authorization) {
     };
 
     const stsDomain = "https://login.microsoftonline.com";
-    const tenant = "7771aa06-3283-4834-b895-908f3bdb9850";
+    const tenant = "common";
     const tokenURLSegment = "oauth2/v2.0/token";
     const encodedForm = form(formParams);
 

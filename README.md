@@ -68,20 +68,4 @@ Part Two
 
 https://github.com/Mr-Mingels/ConveyGuruOutlookAddIn/assets/118281837/b1a97117-6928-45fe-b86c-dafddfe5c95c
 
-## IMPORTANT NOTE:
-
-Unfortunately, I wasn't able to enable login for anybody with a personal Microsoft account due to an Outlook Add-in error specific to Outlook Add-ins, which I couldn't seem to fix. Therefore, to use this Add-in, you need a Microsoft work or school account. If you don't have either of those, I understand. I've created a dummy account that you can use to test the Add-in below.
-
-Email:
-
-```text
-testuser@SWEINC716.onmicrosoft.com
-```
-
-Password:
-
-```text
-ConveyGuruTest1234
-```
-
 ### Happy Hacking! 💻 🎉

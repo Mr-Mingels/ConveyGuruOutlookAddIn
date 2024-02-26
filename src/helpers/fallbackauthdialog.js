@@ -14,13 +14,13 @@ const clientId = "ea944be9-913b-488a-a93f-a35795b29984"; //This is your client I
 const accessScope = `api://${window.location.host}/${clientId}/access_as_user`;
 const loginRequest = {
   scopes: [accessScope],
-  extraScopesToConsent: ["user.read"],
+  extraScopesToConsent: ["user.read", "mail.read"],
 };
 
 const msalConfig = {
   auth: {
     clientId: clientId,
-    authority: "https://login.microsoftonline.com/7771aa06-3283-4834-b895-908f3bdb9850",
+    authority: "https://login.microsoftonline.com/common",
     redirectUri: "https://localhost:3000/fallbackauthdialog.html", // Update config script to enable `https://${window.location.host}/fallbackauthdialog.html`,
     navigateToLoginRequestUrl: false,
   },
