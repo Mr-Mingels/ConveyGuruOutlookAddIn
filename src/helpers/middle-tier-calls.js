@@ -7,6 +7,7 @@ import { showMessage } from "./message-helper";
 import * as $ from "jquery";
 
 export async function getUserData(middletierToken) {
+  console.log("MIDDLE TIER TOKEN:", middletierToken)
   try {
     const response = await $.ajax({
       type: "GET",

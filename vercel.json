@@ -1,8 +1,9 @@
 {
-    "rewrites": [
-        {
-            "source": "/(.*)",
-            "destination": "/src/middle-tier/app.js"
-        }
+    "version": 2,
+    "builds": [
+      {
+        "src": "src/middle-tier/app.js",
+        "use": "@vercel/node"
+      }
     ]
-}
+  }
