@@ -134,16 +134,6 @@ module.exports = async (env, options) => {
           },
         ],
       },
-      plugins: [
-        new CopyWebpackPlugin({
-          patterns: [
-            {
-              from: ".env",
-              to: ".",
-            },
-          ],
-        }),
-      ],
     },
   ];
 
