@@ -5,5 +5,16 @@
         "src": "src/middle-tier/app.js",
         "use": "@vercel/node"
       }
+    ],
+    "routes": [
+      {
+        "src": "/getuserdata",
+        "dest": "src/middle-tier/app.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "src/middle-tier/app.js"
+      }
     ]
   }
+  
