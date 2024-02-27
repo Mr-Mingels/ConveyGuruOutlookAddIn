@@ -10,7 +10,7 @@
   <HighResolutionIconUrl DefaultValue="https://convey-guru-outlook-add-in.vercel.app/assets/conveyguruicon.png"/>
   <SupportUrl DefaultValue="https://www.contoso.com/help"/>
   <AppDomains>
-    <AppDomain>https://www.contoso.com</AppDomain>
+    <AppDomain>https://convey-guru-outlook-add-in.vercel.app/</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Mailbox"/>
@@ -85,7 +85,7 @@
       </Resources>
       <WebApplicationInfo>
         <Id>ea944be9-913b-488a-a93f-a35795b29984</Id>
-        <Resource>api://localhost:3000/ea944be9-913b-488a-a93f-a35795b29984</Resource>
+        <Resource>api://convey-guru-outlook-add-in.vercel.app/ea944be9-913b-488a-a93f-a35795b29984</Resource>
         <Scopes>
           <Scope>User.Read</Scope>
           <Scope>profile</Scope>
