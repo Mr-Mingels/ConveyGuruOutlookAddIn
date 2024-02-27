@@ -21,7 +21,7 @@ const msalConfig = {
   auth: {
     clientId: clientId,
     authority: "https://login.microsoftonline.com/common",
-    redirectUri: "https://localhost:3000/fallbackauthdialog.html", // Update config script to enable `https://${window.location.host}/fallbackauthdialog.html`,
+    redirectUri: "https://convey-guru-outlook-add-in.vercel.app/fallbackauthdialog.html", // Update config script to enable `https://${window.location.host}/fallbackauthdialog.html`,
     navigateToLoginRequestUrl: false,
   },
   cache: {

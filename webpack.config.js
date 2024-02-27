@@ -7,7 +7,7 @@ const nodeExternals = require("webpack-node-externals");
 const { VueLoaderPlugin } = require("vue-loader");
 
 const urlDev = "https://localhost:3000/";
-const urlProd = "https://www.contoso.com/"; // CHANGE THIS TO YOUR PRODUCTION DEPLOYMENT LOCATION
+const urlProd = "https://convey-guru-outlook-add-in.vercel.app/"; // CHANGE THIS TO YOUR PRODUCTION DEPLOYMENT LOCATION
 
 module.exports = async (env, options) => {
   const dev = options.mode === "development";
